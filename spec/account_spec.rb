@@ -14,5 +14,9 @@ describe Account do
   it 'has :active status on initialize' do
     expect(subject.account_status).to eq :active
   end
+  it 'deactivates account using Instance method' do
+    subject.deactivate
+    expect(subject.account_status).to eq :deactivated
+  end
 
 end

@@ -12,6 +12,10 @@ class Account
     @account_status = :active
   end
 
+  def deactivate
+    @account_status = :deactivated
+  end
+
   def set_expire_date
     Date.today.next_year(STANDARD_VALIDITY_YRS).strftime('%m/%y')
   end
