@@ -1,10 +1,8 @@
 require './lib/account'
-describe account do
 
-it 'check length of a number' do
-  number = 1234
-  number_length = Math.log10(number).to_i + 1
-  expect(number_length).to eq 4
-end
+describe Account do
+  it 'is a four numbers code' do
+    expect(subject.pin_code.to_s.length).to eq 4
+  end
 
 end
