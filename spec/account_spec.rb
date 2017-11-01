@@ -7,9 +7,12 @@ describe Account do
   it 'has 0 balance on initialize' do
     expect(subject.balance).to eq 0
   end
-  it 'is expected to have an expiry date on intialize' do
+  it 'has an expiry date on intialize' do
     expected_date = Date.today.next_year(5).strftime("%m/%y")
     expect(subject.exp_date).to eq expected_date
+  end
+  it 'has :active status on initialize' do
+    expect(subject.account_status).to eq :active
   end
 
 end

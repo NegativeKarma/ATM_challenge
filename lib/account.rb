@@ -9,6 +9,7 @@ class Account
     @pin_code = rand(1000..9999)
     @balance = 0
     @exp_date = set_expire_date
+    @account_status = :active
   end
 
   def set_expire_date
