@@ -8,9 +8,9 @@ it 'has a :name on initialize' do
   expect(subject.name).not_to be nil
 end
 
-#it 'raises error if no name is set' do
-#  expect { described_class.new}.to raise_error 'Name required'
-#end
+it 'raises error if no name is set' do
+  expect { described_class.new}.to raise_error 'Name required'
+end
 
 #it 'has a :cash attribute with value of 0 on initialize' do
 #  expect(subject.cash).to eq 0
