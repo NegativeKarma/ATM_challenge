@@ -9,19 +9,19 @@ it 'has a :name on initialize' do
 end
 
 it 'raises error if no name is set' do
-  expect { described_class.new}.to raise_error 'Name required'
+  expect { described_class.new }.to raise_error 'Name required'
 end
 
 it 'has a :cash attribute with value of 0 on initialize' do
   expect(subject.cash).to eq 0
 end
 
-#it 'has a :account attribute' do
-#  expect(subject.account).to be nil
-#end
+it 'has a :account attribute' do
+  expect(subject.account).to be nil
+end
 
 #describe 'can create an Account' do
-#  before { subject.create_account}
+#  before { subject.create_account }
 #  it 'of Account class' do
 #    expect(subject.account).to be_an_instance_of Account
 #  end
