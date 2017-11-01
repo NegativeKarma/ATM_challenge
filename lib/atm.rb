@@ -1,5 +1,6 @@
+require 'date'
+
 class Atm
-  require 'date'
   attr_accessor :funds
 
   def initialize
