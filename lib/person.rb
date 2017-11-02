@@ -21,6 +21,10 @@ class Person
     @account == nil ? no_account : withdraw_funds(args)
   end
 
+  def increase_cash(response)
+    @cash += response[:amount]
+  end
+
   private
 
   def deposit_cash(amount)
@@ -47,6 +51,10 @@ class Person
 
   def no_account
       raise 'No account present'
+  end
+
+  def missing_atm
+    raise RuntimeError, 'ATM required'
   end
 
 end
