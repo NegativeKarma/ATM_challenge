@@ -44,6 +44,13 @@ describe 'can manage funds if an account has been created' do
     expect(subject.account.balance).to be 100
     expect(subject.cash).to be 0
   end
+  it 'adds funds to cash and deducts from account balance' do
+    subject.cash = 100
+    subject.deposit_funds(100)
+    subject.withdraw(amount: 100, pin: subject.account.pin_code, account: subject.account, atm: atm)
+    expect(subject.account.balance).to be 0
+    expect(subject.cash).to be 100
+  end
   it 'can withdraw funds' do
     command = lambda { subject.withdraw(amount: 100, pin: subject.account.pin_code, account: subject.account, atm: atm) }
     expect(command.call).to be_truthy
