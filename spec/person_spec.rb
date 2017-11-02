@@ -1,5 +1,6 @@
 require './lib/person'
 require './lib/atm'
+require './lib/account'
 
 describe Person do
   subject { described_class.new(name: 'Johnny') }
@@ -20,16 +21,16 @@ it 'has a :account attribute' do
   expect(subject.account).to be nil
 end
 
-#describe 'can create an Account' do
-#  before { subject.create_account }
-#  it 'of Account class' do
-#    expect(subject.account).to be_an_instance_of Account
-#  end
-#
-#  it 'with himslef as an owner' do
-#    expect(subject.account.owner).to be subject
-#  end
-#end
+describe 'can create an Account' do
+   before { subject.create_account }
+   it 'of Account class' do
+     expect(subject.account).to be_an_instance_of Account
+   end
+
+  it 'with himself as an owner' do
+    expect(subject.account.owner).to be subject
+  end
+end
 
 #describe 'can manage funds if an account has been created' do
 #  let(:atm) { Atm.new }
