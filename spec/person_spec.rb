@@ -14,7 +14,7 @@ it 'raises error if no name is set' do
 end
 
 it 'has a :cash attribute with value of 0 on initialize' do
-  expect(subject.cash).to eq 0
+  expect(subject.cash).to eq 100
 end
 
 it 'has a :account attribute' do
@@ -32,13 +32,13 @@ describe 'can create an Account' do
   end
 end
 
-#describe 'can manage funds if an account has been created' do
-#  let(:atm) { Atm.new }
-#  before { subject.create_account }
-#  it 'can deposit funds' do
-#    expect(subject.deposit(100)).to be_truthy
-#  end
-#end
+describe 'can manage funds if an account has been created' do
+  let(:atm) { Atm.new }
+  before { subject.create_account }
+  it 'can deposit funds' do
+    expect(subject.deposit_funds(100)).to be_truthy
+  end
+end
 
 #describe 'can not manage funds if no account has been created' do
 #  it 'can\'t deposit funsd' do
