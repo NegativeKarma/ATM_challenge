@@ -14,7 +14,7 @@ class Person
   end
 
   def deposit_funds(amount)
-    deposit_cash(amount)
+    @account == nil ? no_account : @account.balance += amount
   end
 
   private
@@ -30,6 +30,10 @@ class Person
     else
       @name = name
     end
+  end
+
+  def no_account
+      raise 'No account present'
   end
 
 end
