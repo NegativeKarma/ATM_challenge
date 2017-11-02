@@ -14,7 +14,7 @@ class Person
   end
 
   def deposit_funds(amount)
-    @account == nil ? no_account : @account.balance += amount
+    @account == nil ? no_account : deposit_cash(amount)
   end
 
   private
