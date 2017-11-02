@@ -11,7 +11,7 @@ class Person
   end
 
   def create_account
-    @account = Account.new({owner: self})
+    @account = Account.new(owner: self)
   end
 
   def deposit_funds(amount)
