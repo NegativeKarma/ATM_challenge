@@ -3,8 +3,8 @@ require './lib/account'
 class Person
   attr_accessor :name, :cash, :account
 
-  def initialize(name = nil)
-    set_name(name)
+  def initialize(attrs = {})
+    @name = set_name(attrs[:name])
     @cash = 0
     @account = nil
   end
