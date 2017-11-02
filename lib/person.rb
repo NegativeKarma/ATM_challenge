@@ -15,11 +15,11 @@ class Person
   end
 
   def deposit_funds(amount)
-    @account == nil ? no_account : deposit_cash(amount)
+    @account.nil? ? no_account : deposit_cash(amount)
   end
 
   def withdraw(args = {})
-    @account == nil ? no_account : withdraw_funds(args)
+    @account.nil? ? no_account : withdraw_funds(args)
   end
 
   private
@@ -30,7 +30,7 @@ class Person
   end
 
   def withdraw_funds(args)
-    args[:atm] == nil ? missing_atm : atm = args [:atm]
+    args[:atm].nil? ? missing_atm : atm = args [:atm]
     account = @account
     amount = args[:amount]
     pin = args [:pin]
@@ -43,7 +43,7 @@ class Person
   end
 
   def set_name(name)
-    if name == nil
+    if name.nil?
       raise 'Name required'
     else
       @name = name
@@ -51,11 +51,10 @@ class Person
   end
 
   def no_account
-      raise 'No account present'
+    raise 'No account present'
   end
 
   def missing_atm
-    raise RuntimeError, 'ATM required'
+    raise 'ATM required'
   end
-
 end

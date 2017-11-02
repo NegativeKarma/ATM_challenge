@@ -25,11 +25,10 @@ class Account
   private
 
   def set_owner(obj)
-    obj == nil ? missing_owner : obj
+    obj.nil? ? missing_owner : obj
   end
 
   def missing_owner
-    raise "Account owner required"
+    raise 'Account owner required'
   end
-
 end
