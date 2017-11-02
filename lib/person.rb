@@ -5,7 +5,7 @@ class Person
 
   def initialize(name = nil)
     set_name(name)
-    @cash = 100
+    @cash = 0
     @account = nil
   end
 

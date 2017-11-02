@@ -14,7 +14,7 @@ it 'raises error if no name is set' do
 end
 
 it 'has a :cash attribute with value of 0 on initialize' do
-  expect(subject.cash).to eq 100
+  expect(subject.cash).to eq 0
 end
 
 it 'has a :account attribute' do
