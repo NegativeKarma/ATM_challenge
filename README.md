@@ -1,6 +1,6 @@
 # ATM_challenge
 
-## Project with Ruby, week 1 at Craftacademy
+## Project with Ruby, week 1 at CraftAcademy
 
 ## Introduction to the Project
 
